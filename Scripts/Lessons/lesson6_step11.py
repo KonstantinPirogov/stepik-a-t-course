@@ -3,16 +3,16 @@ import chromedriver_binary # использую pycharm, это костыль, 
 import time
 
 try:
-    link = "http://suninjuly.github.io/registration1.html"
+    link = "http://suninjuly.github.io/registration2.html"
     browser = webdriver.Chrome()
     browser.get(link)
 
     # Ваш код, который заполняет обязательные поля
-    input1 = browser.find_element_by_css_selector(".form-group input:nth-child(2)")
+    input1 = browser.find_element_by_css_selector(".first_block .first")
     input1.send_keys("Ivan")
-    input2 = browser.find_element_by_css_selector(".form-group input:nth-child(4)")
+    input2 = browser.find_element_by_css_selector(".first_block .second")
     input2.send_keys("Petrov")
-    input3 = browser.find_element_by_css_selector(".form-group input:nth-child(6)")
+    input3 = browser.find_element_by_css_selector(".first_block .third")
     input3.send_keys("testmail@lesson.com")
 
     # Отправляем заполненную форму
